@@ -2,7 +2,7 @@
 |---|---|
 | **Pentester Name** | Chinedum Nelson Ariwa |
 | **Program/Batch** | B083-Networkwalks |
-| **Assessment Date** | October 2026 |
+| **Assessment Date** | October 2, 2026 |
 | **Project** | Mediroza Hospital Penetration Testing |
 | **Client/Target** | `https://medirozahospital.com` |
 | **Authorization** | Written permission stated in the project brief |
