@@ -35,17 +35,16 @@
 | `VirtualBox` | Run the Kali Linux virtual machine. |
 
 3. Findings and Prove of Exploitations
-3.1 Patients and Staff Login Portal
    
+3.1 Patients and Staff Login Portal
 | Field | Patient Portal | Staff Portal |
-
-|---|---|
+|---|---|---|
 | **Endpoint** | `/patient/login.php` | `/staff/login.php` |
 | **HTTP Method** | `POST` | `POST` |
 | **Username Field** | `username` | `username` |
-| **Password Field** | password` | `password` |
-| **Observed Status** | Login page loaded successfully | Login page accessed |
-| **Security Assessment** | Authentication mechanism identified | Authentication mechanism identified |
+| **Password Field** | `password` | `password` |
+| **Observed Status** | Login page loaded successfully | Login page accessed successfully |
+| **Security Assessment** | Authentication mechanism identified | Authentication mechanism identified |   
 
 Observation: Both portals use username-and-password authentication. The presence of these login pages alone does not establish a security vulnerability.
 
@@ -62,25 +61,29 @@ Observation: Both portals use username-and-password authentication. The presence
 
 Observation: The reported exposure warrants investigation. Confirm the resource's accessibility and authorization requirements before assigning a final risk rating. Do not include actual patient records or unnecessary staff personal information in the report.
 
-4. Milestone Progress
-This table shows which project objectives I have completed.
+## 4. Milestone Progress
+
+This table shows the progress of the project objectives.
+
 | Milestone | Required Task | Evidence to Include | Status |
 |---|---|---|---|
-| `M1` | Initial Access** | Access the designated patient PDF reports and retrieve all three files. | Screenshots and evidence confirming retrieval of the three PDFs. | Completed. |
-| `M2` | Data Extraction** | Crack the encryption and recover the contents of all three PDF files. | Evidence of the encryption analysis and successful recovery for each file. | Completed. |
-| `M3` | Critical Data Exposure** | Identify staff salaries and shareholder details. | Redacted evidence supporting both findings. | Staff salary information reportedly accessed; confirm shareholder details separately. |
-| `M4` | Pentest Report** | Produce the final report with findings, risk ratings, and recommendations. | Completed report with supporting evidence. | In progress until the report is finalized. |
+| `M1` | **Initial Access** | Access the designated patient PDF reports and retrieve all three files. | Screenshots and evidence confirming retrieval of all three PDFs. | Completed |
+| `M2` | **Data Extraction** | Crack the encryption and recover the contents of all three PDF files. | Evidence of encryption analysis and successful recovery for each file. | Completed |
+| `M3` | **Critical Data Exposure** | Identify staff salaries and shareholder details. | Redacted evidence supporting both findings. | Staff salary information reportedly accessed; shareholder details require separate confirmation. |
+| `M4` | **Penetration Testing Report** | Produce the final report with findings, risk ratings, and recommendations. | Completed report with supporting evidence. | In progress until the report is finalized. |
 
-5. Risk Rating
+## 5. Risk Rating
+
+The following table summarizes the identified security findings, their associated risk factors, risk ratings, and potential impacts.
+
 | S/N | Finding | Evidence Collected | Risk Factor | Risk Rating | Justification |
 |---|---|---|---|---|---|
-| 1 | `Exposure of patient PDF laboratory reports` | `Evidence showing that three patient PDF reports were retrieved` | **Confidentiality breach involving sensitive medical information** | **Critical** | `If the reports contain real patient medical information and were accessible without authorization, the exposure could seriously compromise patient privacy and confidentiality.`|
-| 2 | `Exposure of a legacy database backup` | `Evidence showing that `mediroza_db_backup_2019_sql` was publicly accessible` | **Unauthorized access to database information** | **Critical** | If the backup contains sensitive patient records, staff information, credentials, or other confidential data, public access could expose a substantial amount of information. |
-| 3 | `Exposure of staff salary information` | `Evidence showing staff salary details were accessible` | **Confidentiality breach involving employee financial information** | **High** | `Unauthorized disclosure of salary information could violate employee privacy and expose confidential organizational information`. |
-| 4 | `Exposure of staff names, phone numbers, and email addresses` | `Evidence showing staff contact information was accessible` | **Personal information disclosure** | **High** | `Exposed contact details could facilitate phishing, social engineering, impersonation, or targeted attacks against hospital staff. |
-| 5 | `Exposure of shareholder details` | `Evidence showing shareholder information was accessible` | **Disclosure of confidential business information** | **High**, `if the information is confidential and the impact is significant` | `The impact depends on the sensitivity of the information, whether it was intended for public release, and whether it could enable fraud or targeted attacks`. |
-| 6 | `Patient and staff login portals` | `Burp Suite evidence showing the login pages and their HTTP requests` | **Potential authentication risk** | **Informational — no vulnerability established** | `The existence of login pages and the use of POST requests do not, by themselves, demonstrate a vulnerability. A higher rating requires evidence of a specific authentication weakness`. | 
-
+| 1 | Exposure of patient PDF laboratory reports | Evidence showing that three patient PDF reports were retrieved. | Confidentiality breach involving sensitive medical information. | **Critical** | Unauthorized access to real patient medical reports could seriously compromise patient privacy and confidentiality. |
+| 2 | Exposure of a legacy database backup | Evidence showing that `mediroza_db_backup_2019_sql` was publicly accessible. | Unauthorized access to database information. | **Critical** | If the backup contains sensitive patient records, staff information, credentials, or other confidential data, its exposure could result in a significant data breach. |
+| 3 | Exposure of staff salary information | Evidence showing that staff salary details were accessible. | Confidentiality breach involving employee financial information. | **High** | Unauthorized disclosure of salary information could violate employee privacy and expose confidential organizational information. |
+| 4 | Exposure of staff contact information | Evidence showing that staff names, phone numbers, and email addresses were accessible. | Personal information disclosure. | **High** | Exposed contact details could facilitate phishing, social engineering, impersonation, or targeted attacks against hospital staff. |
+| 5 | Exposure of shareholder details | Evidence showing that shareholder information was accessible. | Disclosure of confidential business information. | **High**, if the information is confidential and the impact is significant. | The risk depends on the sensitivity of the information, whether it was intended for public release, and the potential for fraud or targeted attacks. |
+| 6 | Patient and staff login portals | Burp Suite evidence showing the login pages and their HTTP requests. | Potential authentication risk. | **Informational — no vulnerability established.** | The existence of login pages and the use of POST requests do not independently demonstrate a vulnerability. A higher rating requires evidence of a specific authentication weakness. |
 Risk Rating Key
 | Rating | Description |
 |---|---|
