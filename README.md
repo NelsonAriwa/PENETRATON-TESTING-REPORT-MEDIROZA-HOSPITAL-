@@ -16,10 +16,10 @@
 |---|---|
 | Target | `https://medirozahospital.com` |
 | Assessment Type | Authorized educational web application penetration testing |
-| M1 — Initial Access | Retrieve three designated patient PDF lab reports and document proof of access. |
-| M2 — Data Extraction | Analyze the encryption of the three PDF files and document successful recovery of their contents. |
-| M3 — Critical Data Exposure | Investigate and document the required staff salary and shareholder information. |
-| M4 — Penetration Testing Report | Prepare the report, including findings, evidence, risk ratings, and remediation recommendations. |
+| M1 | Initial Access | Retrieve three designated patient PDF lab reports and document proof of access. |
+| M2 |  Data Extraction | Analyze the encryption of the three PDF files and document successful recovery of their contents. |
+| M3 | Critical Data Exposure | Investigate and document the required staff salary and shareholder information. |
+| M4 | Penetration Testing Report | Prepare the report, including findings, evidence, risk ratings, and remediation recommendations. |
 
 2.2 Tools and Their Purposes
 | Tool | Purpose |
