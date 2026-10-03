@@ -11,15 +11,17 @@
 | **Project Status** | In progress; update based on verified milestone evidence |
 
 2. Scope and Methodology
+   
 2.1 Scope
+   
 | Item | Description |
 |---|---|
-| Target | `https://medirozahospital.com` |
+| `Target` | `https://medirozahospital.com` |
 | Assessment Type | Authorized educational web application penetration testing |
-| M1 | Initial Access | Retrieve three designated patient PDF lab reports and document proof of access. |
-| M2 |  Data Extraction | Analyze the encryption of the three PDF files and document successful recovery of their contents. |
-| M3 | Critical Data Exposure | Investigate and document the required staff salary and shareholder information. |
-| M4 | Penetration Testing Report | Prepare the report, including findings, evidence, risk ratings, and remediation recommendations. |
+| `M1` | Initial Access | Retrieve three designated patient PDF lab reports and document proof of access. |
+| `M2` |  Data Extraction | Analyze the encryption of the three PDF files and document successful recovery of their contents. |
+| `M3` | Critical Data Exposure | Investigate and document the required staff salary and shareholder information. |
+| `M4` | Penetration Testing Report | Prepare the report, including findings, evidence, risk ratings, and remediation recommendations. |
 
 2.2 Tools and Their Purposes
 | Tool | Purpose |
@@ -29,7 +31,7 @@
 | `cURL` | Inspect HTTP response headers and retrieve website resources. |
 | `WhatWeb` | Identify web technologies where responses permit. |
 | `Burp Suite Community Edition` | Inspect browser-generated HTTP requests and responses. |
-| Web Browser | Navigate the website and inspect pages through normal browsing. |
+| `Web Browser` | Navigate the website and inspect pages through normal browsing. |
 | `VirtualBox` | Run the Kali Linux virtual machine. |
 
 3. Findings and Prove of Exploitations
