@@ -36,12 +36,14 @@
 
 3. Findings and Prove of Exploitations
 3.1 Patients and Staff Login Portal
+   
 | Field | Patient Portal | Staff Portal |
+
 |---|---|---|
-| **Endpoint** | `/patient/login.php` | `/staff/login.php` |
+| **Endpoint** | /patient/login.php | /staff/login.php |
 | **HTTP Method** | `POST` | `POST` |
-| **Username Field** | `username` | `username` |
-| **Password Field** | `password` | `password` |
+| **Username Field** | username | username |
+| **Password Field** | password` | `password` |
 | **Observed Status** | Login page loaded successfully | Login page accessed |
 | **Security Assessment** | Authentication mechanism identified | Authentication mechanism identified |
 
